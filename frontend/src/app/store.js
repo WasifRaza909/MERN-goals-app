@@ -1,12 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
-
-function placeholderReducer(state = {}, action) {
-  return state;
-}
-
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "../features/auth/authSlice";
 
 export const store = configureStore({
   reducer: {
-    placeholder: placeholderReducer
-  }
+    auth: authReducer,
+  },
 });
